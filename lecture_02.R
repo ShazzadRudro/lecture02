@@ -111,4 +111,24 @@ female_characters
 female_N_age2plus <- cartoon[cartoon$gender == "Female", cartoon$age > 2]
 female_N_age2plus
 
+# Data set 02
+gene_expr <- data.frame(
+  genes = c("TP53", "BRCA1", "MYC", "EGFR", "GAPDH", "CDC2"),
+  sample1 = c(8.2, 6.1, 9.5, 7.0, 10.0, 12),
+  Sample2 = c(5.9, 3.9, 7.2, 4.8, 7.9, 9),
+  Sample3 = c(8.25, 6.15, 9.6, 7.1, 10.1, 11.9),
+  pathways = c("Apoptosis", "DNA Repair", "Cell Cycle", "Signaling", "Housekeeping", "Cell Division")
+)
+gene_expr
+
+# Fintering the gene that is involved in apopsotis pathway
+geneforApoptosis <- gene_expr[gene_expr$pathways == 'Apoptosis', ]
+geneforApoptosis[1]
+
+# Finding which pathway is BRCA1 involvewith
+BRCA1pathway <- gene_expr[gene_expr$genes == 'BRCA1', ]
+BRCA1pathway[5]
+
+
+
 
